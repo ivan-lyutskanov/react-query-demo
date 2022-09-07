@@ -1,0 +1,19 @@
+html { font-size: 62.5%; }
+
+body {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+#root { height: 100vh; }
+
+a, button {
+    all: unset;
+    cursor: pointer;
+}
+
+a.active {
+    box-shadow: 0 0.1rem 0 0 lightcyan;
+}

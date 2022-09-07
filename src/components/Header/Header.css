@@ -1,0 +1,15 @@
+.Header {
+    height: 8rem;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: darkcyan;
+    color: lightcyan;
+    margin-bottom: 3rem;
+}
+
+.Header nav {
+    display: flex;
+    gap: 2rem;
+}
