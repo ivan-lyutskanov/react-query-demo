@@ -1,4 +1,4 @@
-//Domain Object
+//Domain Object Constructor
 class Todo {
     #id; 
     #title; 
@@ -38,6 +38,6 @@ class Todo {
     }
 
     static exportDTO({title}) {
-        return { userId: 1, title, completed: false }
+        return { title, completed: false }
     }
 }

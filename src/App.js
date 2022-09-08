@@ -3,19 +3,19 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import Posts from "./containers/Posts/Posts";
-import Todos from "./containers/Todos/Todos";
+import MainLayout from "./components/layouts/MainLayout/MainLayout";
+import Posts from "./pages/Posts/Posts";
+import Todos from "./pages/Todos/Todos";
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
+      <MainLayout>
         <Routes>
           <Route index element={<Todos />} />
           <Route path="posts" element={<Posts />} />
         </Routes>
-      </Layout>
+      </MainLayout>
     </BrowserRouter>
   );
 }

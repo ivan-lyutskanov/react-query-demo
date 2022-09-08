@@ -1,10 +1,10 @@
 import Header from '../Header/Header'
 
-import './Layout.css'
+import './MainLayout.css'
 
-export default function Layout(props) {
+export default function MainLayout(props) {
   return (
-  <section className='Layout'>
+  <section className='MainLayout'>
     <Header/>
     <main>{props.children}</main>
   </section>

@@ -1,0 +1,13 @@
+/* Utility Classes */
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.warn-bg {
+    background-color: orangered;
+}

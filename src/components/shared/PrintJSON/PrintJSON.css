@@ -1,10 +1,11 @@
 .PrintJSON {
     white-space: pre-wrap; 
-    height: 50vh;
+    max-height: 50vh;
     overflow: auto;
     background-color: black;
     color: limegreen;
     font-size: small;
     padding: 1.5rem;
     border-radius: 4px;
+    margin: 1rem 0;
 }
