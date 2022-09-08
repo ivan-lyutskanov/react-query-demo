@@ -1,4 +1,4 @@
-# Presentaion's Notes
+# Presentation's Notes
 
 ## Types of state
 
@@ -6,14 +6,10 @@
 
 **Server State** = network state/cache
 
-**Client State** has the following 2 sub. categories and representations:
+**Client State** has the following representations:
 
-In Memory:
 - *Local State* - Component state (ex. useState, useRef, Props)
 - *"Global State"* - State available across multiple components (The whole App or certain parts)
-  
-Persistant*:
-
 - *Router State* - State available across the whole App via URL params
 - *Storage State* - State available across the whole App via Browser Storage API (Cookie, Session, Local Storage, IndexDB)
 
@@ -35,7 +31,7 @@ Enough of Redux 🤕
 
 Let's go back to the types of state and consider if we really need Redux in the first place. 
 
-Almost every web/client application rely heavily on server communication. Most of those apps state is represented via network state. Typically **more** than 90% of all app state is actually server state. This % ofcorse can vary from app to app (or even when the app scales). With that said and with such impact is much more important how we handle and manage our server state effectively beside rest of the state (global)
+Almost every web/client application rely heavily on server communication. Most of those apps state is represented via network state. Typically **more** than 90% of all app state is actually server state. This % ofcorse can vary from app to app. With such impact is much more important how we handle and manage our server state effectively beside rest of the state (global)
 
 This is where React Query steps in.
 
