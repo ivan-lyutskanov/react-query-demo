@@ -15,7 +15,7 @@ export const useAsync = (asyncFnAsProp) => {
       setData(result)
       return result
     } catch (error) {
-      const result = { data: null, error, loading: false }
+      const result = { data: null, error: error.message, loading: false }
       setData(result)
       return result
     }

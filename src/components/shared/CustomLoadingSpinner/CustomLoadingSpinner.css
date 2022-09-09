@@ -1,0 +1,39 @@
+.CustomLoadingSpinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lightcyan;
+    z-index: 9999;
+}
+
+.CustomLoadingSpinner .loading-spinner {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+  }
+
+.CustomLoadingSpinner  .loading-spinner:after {
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 10px solid darkcyan;
+    border-color: darkcyan transparent darkcyan transparent;
+    animation: loading-spinner 1.7s linear infinite;
+  }
+
+@keyframes loading-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
