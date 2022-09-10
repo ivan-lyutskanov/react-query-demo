@@ -3,16 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import LoadingProvider from './utils/loadingProvider';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
+// import { ReactQueryDevtools } from 'react-query/devtools'
 
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LoadingProvider>
-      <App />
-    </LoadingProvider>
+    <QueryClientProvider client={queryClient}>
+      <LoadingProvider>
+        <App />
+      </LoadingProvider>
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+    </QueryClientProvider>
   </React.StrictMode>
 );
 

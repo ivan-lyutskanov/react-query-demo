@@ -2,23 +2,19 @@ import PrintJSON from "../../shared/PrintJSON/PrintJSON"
 import {updatePost, deletePost} from '../../../services/Posts.service'
 import { messageSuccess, messageError } from "../../../utils/notifications"
 
-const editedPost = {
-  title: 'Edited post title',
-  body: 'Edited post body'
-}
-
 export default function SinglePost({post, onMutateCb}) {
 
   const onSuccess = (text) => {
     onMutateCb && onMutateCb()
     messageSuccess(text)
   }
-  const onUpdate = () => updatePost(post.id, editedPost)
-                          .then(() => onSuccess(`Post ${post.id} was updated`))
+
+  const onUpdate = () => updatePost({ id: post.id, title: 'Edited post title', body: 'Edited post body'})
+                          .then(() => onSuccess(`Post was updated`))
                           .catch((err) => messageError(err?.message))
 
   const onDelete = () => deletePost(post.id)
-                          .then(() => onSuccess(`Post ${post.id} was deleted`))
+                          .then(() => onSuccess(`Post was deleted`))
                           .catch((err) => messageError(err?.message))
 
   return (

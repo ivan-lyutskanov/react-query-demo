@@ -21,8 +21,8 @@ export function createPost(post) {
       .then((res) => res.json());  
 }
 
-export function updatePost(id, post) {
-    return fetch(POSTS_URL + id, {
+export function updatePost(post) {
+    return fetch(POSTS_URL + post.id, {
         method: 'PUT',
         body: JSON.stringify(post),
         headers: {
